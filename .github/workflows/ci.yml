@@ -36,7 +36,7 @@ jobs:
       - name: Build with Gradle
         run: |
           ./gradlew -q javaToolchains
-          ./gradlew build --scan --info -Dorg.gradle.caching.debug=true
+          ./gradlew build --scan --build-cache --info -Dorg.gradle.caching.debug=true
       - name: Cleanup Gradle Cache
         run: |
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
@@ -72,7 +72,7 @@ jobs:
       - name: Build with Gradle
         run: |
           ./gradlew -q javaToolchains
-          ./gradlew build --scan --info -Dorg.gradle.caching.debug=true
+          ./gradlew build --scan --build-cache --info -Dorg.gradle.caching.debug=true
       - name: Cleanup Gradle Cache
         run: |
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
